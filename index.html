@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>print("python") – Learn Python Step by Step, Beginner to Expert</title>
+<meta name="description" content="print(&quot;python&quot;) is a free Python course in your browser: step-by-step lessons from print() to decorators and generators, run code online, daily goals, weekly leaderboard and unlockable avatars.">
+<meta name="keywords" content="print python, print(&quot;python&quot;), learn python, python course, python for beginners, python expert, run python online">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://YOUR-USERNAME.github.io/print-python/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="print(&quot;python&quot;) – Learn Python Step by Step">
+<meta property="og:description" content="Free interactive Python course from beginner to expert, with a daily goals, scores and a weekly leaderboard.">
+<meta property="og:url" content="https://YOUR-USERNAME.github.io/print-python/">
+<meta name="twitter:card" content="summary">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Course","name":"print(\"python\") – Learn Python Step by Step","description":"Interactive Python course from beginner to expert.","provider":{"@type":"Organization","name":"print(\"python\")","url":"https://YOUR-USERNAME.github.io/print-python/"},"isAccessibleForFree":true}</script>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🐍</text></svg>">
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;600;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f2f2f2;--card:#fff;--ink:#000;--mut:#555;--blue:#000;--yel:#000;--on:#fff;--line:#bdbdbd;--code:#000;--ok:#000;--bad:#000}
+@media (prefers-color-scheme:dark){:root{--bg:#000;--card:#0d0d0d;--ink:#fff;--mut:#aaa;--blue:#fff;--yel:#fff;--on:#000;--line:#3a3a3a;--code:#1a1a1a;--ok:#fff;--bad:#fff}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Figtree,system-ui,sans-serif;line-height:1.55}
+.mono{font-family:"JetBrains Mono",monospace}
+.logo{font-family:"JetBrains Mono",monospace;font-weight:700;font-size:1.5rem;letter-spacing:-.5px;white-space:nowrap}
+.logo .f{color:var(--blue)}.logo .s{background:var(--ink);color:var(--bg);padding:0 .25em;border-radius:4px}.logo .p{color:var(--mut)}
+.hide{display:none!important}
+button{font:inherit;cursor:pointer;border:0;border-radius:8px;padding:.55em 1em;font-weight:600}
+button:focus-visible,input:focus-visible,textarea:focus-visible{outline:3px solid var(--blue);outline-offset:2px}
+.pri{background:var(--blue);color:var(--on)}.sec{background:transparent;color:var(--ink);border:1px solid var(--line)}.yel{background:var(--yel);color:var(--on)}
+input{width:100%;padding:.7em;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--ink);font:inherit;margin:.3em 0 1em}
+#auth{min-height:100vh;display:grid;place-items:center;padding:1rem}
+.box{background:var(--card);padding:2rem;border-radius:14px;width:min(420px,100%);border:1px solid var(--line)}
+.box .logo{font-size:2rem;text-align:center;margin-bottom:.3rem}.box .t{text-align:center;color:var(--mut);margin:0 0 1.2rem;font-size:1rem;font-weight:400}
+.tabs{display:flex;gap:.5rem;margin-bottom:1rem}.tabs button{flex:1}.tabs .on{background:var(--ink);color:var(--bg)}
+.err{color:var(--bad);min-height:1.4em;margin:.5em 0}
+header{display:flex;align-items:center;gap:1rem;padding:.8rem 1.2rem;background:var(--card);border-bottom:1px solid var(--line);flex-wrap:wrap}
+header .sp{flex:1}
+.stat{display:flex;gap:.4rem;align-items:baseline}.stat b{font-size:1.4rem}.stat span{color:var(--mut)}
+main{display:grid;grid-template-columns:260px 1fr;gap:1rem;padding:1rem;max-width:1200px;margin:auto}
+@media(max-width:800px){main{grid-template-columns:1fr}}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:1rem;margin-bottom:1rem}
+h2,h3{margin:.2em 0 .5em}
+.nav button{display:block;width:100%;text-align:left;background:none;color:var(--ink);padding:.5em .6em;border-radius:6px;font-weight:400}
+.nav button.on{background:var(--yel);color:var(--on);font-weight:700}.nav button.dn::after{content:" ✔";color:var(--ok)}
+.bar{height:10px;background:var(--line);border-radius:6px;overflow:hidden;margin:.4rem 0}.bar i{display:block;height:100%;background:var(--blue);width:0;transition:width .4s}
+.goal{display:flex;gap:.5rem;align-items:center;margin:.25rem 0}.goal.ok{color:var(--ok);font-weight:600}
+pre,textarea{background:var(--code);color:#e8eefb;padding:1rem;border-radius:8px;font-family:"JetBrains Mono",monospace;font-size:.92rem;margin:.5rem 0;overflow:auto;width:100%;tab-size:4}
+textarea{min-height:150px;resize:vertical;border:0}
+.out{min-height:3em;white-space:pre-wrap;border-left:4px solid var(--yel)}
+.res{font-weight:600;min-height:1.5em}.res.ok{color:var(--ok)}.res.bad{color:var(--bad)}
+.log{max-height:180px;overflow:auto;font-size:.9rem;color:var(--mut);padding-left:1.1rem;margin:.3rem 0 0}
+.row{display:flex;gap:.5rem;flex-wrap:wrap}
+.k{font-weight:800}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}}
+.av{display:inline-grid;place-items:center;width:2.2rem;height:2.2rem;border-radius:50%;background:var(--bg);filter:grayscale(1);overflow:hidden;font-size:1.3rem;line-height:1;flex:none;vertical-align:middle}
+.av img{width:100%;height:100%;object-fit:cover}.av.big{width:5rem;height:5rem;font-size:3rem}
+.lb{list-style:none;margin:0;padding:0}.lb li{display:flex;align-items:center;gap:.5rem;padding:.3rem 0;border-bottom:1px solid var(--line)}.lb li.me{font-weight:800}.lb .n{width:1.4rem}.lb .sp{flex:1}
+dialog{background:var(--card);color:var(--ink);border:2px solid var(--ink);border-radius:12px;width:min(560px,94vw);padding:1.2rem}dialog::backdrop{background:#000a}
+.grid{display:flex;flex-wrap:wrap;gap:.5rem;margin:.4rem 0 1rem}
+.it{border:2px solid var(--line);background:var(--bg);color:var(--ink);padding:.3rem .6rem;border-radius:8px;min-width:3.4rem;text-align:center}.it.sel{border-color:var(--ink)}.it:disabled{opacity:.45;cursor:not-allowed}.it small{display:block;font-size:.7rem}
+</style>
+</head>
+<body>
+
+<section id="auth">
+  <div class="box">
+    <div class="logo"><span class="f">print</span><span class="p">(</span><span class="s">"python"</span><span class="p">)</span></div>
+    <h1 class="t">Learn Python one step at a time, from first line to expert.</h1>
+    <div class="tabs"><button id="tL" class="on" type="button">Log in</button><button id="tS" class="sec" type="button">Create account</button></div>
+    <form id="af">
+      <label for="u">Username</label><input id="u" autocomplete="username" required minlength="3">
+      <label for="p">Password</label><input id="p" type="password" autocomplete="current-password" required minlength="4">
+      <div class="err" id="err" role="alert"></div>
+      <button class="pri" style="width:100%" id="go">Log in</button>
+    </form>
+    <p class="t" style="font-size:.8rem;margin:1rem 0 0">Free Python course: print(), variables, loops, functions, classes, decorators, generators, regex, files and more. Run code in your browser, hit daily goals, climb the weekly leaderboard and unlock avatars.</p>
+  </div>
+</section>
+
+<section id="app" class="hide">
+  <dialog id="pm"></dialog>
+  <header>
+    <div class="logo"><span class="f">print</span><span class="p">(</span><span class="s">"python"</span><span class="p">)</span></div>
+    <div class="sp"></div>
+    <div class="stat"><b id="score">0</b><span>points</span></div>
+    <div class="stat"><b id="level">Beginner</b></div>
+    <div class="stat"><b id="streak">0</b><span>day streak</span></div>
+    <button class="sec" id="who" aria-label="Open profile"></button>
+    <button class="sec" id="out">Log out</button>
+  </header>
+  <main>
+    <aside>
+      <div class="card">
+        <h3>Today's goals</h3>
+        <div id="goals"></div>
+        <div class="bar"><i id="gbar"></i></div>
+        <small id="gtxt"></small>
+      </div>
+      <div class="card nav"><h3>Your path</h3><div id="nav"></div>
+        <div class="bar"><i id="pbar"></i></div><small id="ptxt"></small></div>
+      <div class="card"><h3>Weekly leaderboard</h3><ul class="lb" id="lb"></ul><small>Points gained this week. Resets every Monday.</small></div>
+      <div class="card"><h3>Activity log</h3><ul class="log" id="log"></ul></div>
+    </aside>
+    <article>
+      <div class="card" id="lesson"></div>
+    </article>
+  </main>
+</section>
+
+<script>
+/* ===== LESSONS: add more objects here to extend the course ===== */
+const L=[
+{t:"1. print() and output",d:"print() sends text to the screen. Text must sit inside quotes, which makes it a string.",h:"Python reads your file top to bottom. The interpreter turns each line into bytecode, runs it, and print() writes the result to standard output, which is the screen.",c:'print("Hello, Python")\nprint("Line two")',q:"Print exactly: Hello, World!",a:"Hello, World!"},
+{t:"2. Variables",d:"A variable is a name that points to a value stored in memory. Use = to assign.",h:"When Python runs age = 20, it creates the number 20 in memory and binds the name age to it. Later lines look the name up and use the value.",c:'name = "Ada"\nage = 20\nprint(name, age)',q:"Set age = 20, then print age + 5.",a:"25"},
+{t:"3. Numbers and operators",d:"Python has int (whole) and float (decimal) numbers. Operators: + - * / // (floor divide) % (remainder) ** (power).",h:"Python evaluates an expression using operator precedence (** first, then * / // %, then + -), then produces one value.",c:"print(10 / 4)\nprint(10 // 4)\nprint(10 % 4)\nprint(2 ** 3)",q:"Print 7 // 2 on one line, then 7 % 2 on the next.",a:"3\n1"},
+{t:"4. Strings",d:"A string is text. You can measure it with len(), change it with methods like .upper(), and join with +.",h:"Strings are immutable: a method such as .upper() builds a new string and returns it. The original never changes.",c:'s = "print python"\nprint(s.upper())\nprint(len(s))',q:'Print the length of "print python".',a:"12"},
+{t:"5. Conditions (if / else)",d:"if runs a block only when a condition is True. else runs when it is False.",h:"Python evaluates the condition to True or False. Indentation marks which lines belong to the block, and only the matching block executes.",c:'n = 8\nif n % 2 == 0:\n    print("even")\nelse:\n    print("odd")',q:'Set n = 9 and print "even" or "odd" with if/else.',a:"odd"},
+{t:"6. Loops",d:"A for loop repeats a block once for each item in a sequence. range(a, b) gives a up to b-1.",h:"Python takes the next item from range(), assigns it to the loop variable, runs the indented block, and repeats until items run out.",c:"for i in range(1, 4):\n    print(i)",q:"Print the numbers 1 to 5, one per line.",a:"1\n2\n3\n4\n5"},
+{t:"7. Lists",d:"A list holds many values in order, written in [ ]. Items are numbered from 0.",h:"A list is stored as a row of references in memory. Indexing like nums[0] jumps straight to that position. Lists can be changed in place.",c:"nums = [4, 9, 2]\nnums.append(7)\nprint(nums[0], max(nums))",q:"Print the largest value in [4, 9, 2].",a:"9"},
+{t:"8. Dictionaries",d:"A dictionary stores key: value pairs in { }. You look values up by key.",h:"Python hashes the key to find its slot, so lookups stay fast even when the dictionary is large.",c:'p = {"name": "Ada", "age": 20}\nprint(p["name"])',q:'Create d = {"lang": "python"} and print d["lang"].',a:"python"},
+{t:"9. Functions",d:"A function is a reusable block of code made with def. It can take inputs (parameters) and give back a result with return.",h:"Defining a function stores it under a name without running it. Calling it creates a fresh scope for the parameters, runs the body, and hands back the returned value.",c:"def square(n):\n    return n * n\n\nprint(square(5))",q:"Define square(n) and print square(6).",a:"36"},
+{t:"10. Classes and objects",d:"A class is a blueprint. An object is one thing built from it, with its own data (attributes) and actions (methods).",h:"Calling Dog('Rex') creates a new object, runs __init__ to set it up, and every method call receives that object as self.",c:'class Dog:\n    def __init__(self, name):\n        self.name = name\n    def bark(self):\n        return self.name + " says woof"\n\nprint(Dog("Rex").bark())',q:'Make class Cat with __init__(self, name) and meow() returning name + " says meow". Print Cat("Tom").meow().',a:"Tom says meow"},
+{t:"11. Exceptions (try / except)",d:"An exception is an error that happens while the program runs. try / except lets you handle it instead of crashing.",h:"When an error occurs, Python stops the current line and looks for a matching except block. If it finds one, it runs that block and carries on. If not, the program ends with a traceback.",c:"try:\n    print(1 / 0)\nexcept ZeroDivisionError:\n    print('cannot divide by zero')\nfinally:\n    print('done')",q:"Run 1 / 0 inside try/except ZeroDivisionError and print caught.",a:"caught"},
+{t:"12. Comprehensions",d:"A comprehension builds a list (or dict, or set) from a loop in one expression.",h:"Python runs the loop internally and collects each result into a new container. It is shorter than a for loop and usually faster.",c:"squares = [x * x for x in range(1, 6)]\nevens = [x for x in range(10) if x % 2 == 0]\nprint(squares, evens)",q:"Print the squares of 1 to 5 as a list using a comprehension.",a:"[1, 4, 9, 16, 25]"},
+{t:"13. Lambda, map and filter",d:"A lambda is a tiny unnamed function. map() applies a function to every item and filter() keeps items that pass a test.",h:"map and filter return lazy iterators. They do no work until something, like list(), asks for the values.",c:"nums = [1, 2, 3, 4]\nprint(list(map(lambda x: x * 2, nums)))\nprint(list(filter(lambda x: x > 2, nums)))",q:"Use map with a lambda to double [1, 2, 3] and print the list.",a:"[2, 4, 6]"},
+{t:"14. Modules and imports",d:"A module is a Python file full of ready-made tools. import brings them into your program.",h:"On import, Python finds the module, runs it once, caches it in sys.modules, and gives you a name to use its contents.",c:"import math\nfrom collections import Counter\nprint(math.pi)\nprint(Counter('banana'))",q:"Import math and print the square root of 81.",a:"9.0"},
+{t:"15. Files and with",d:"open() reads and writes files. The with statement closes the file for you, even if an error happens.",h:"open() asks the operating system for a file handle. with guarantees the handle is released when the block ends.",c:"with open('note.txt', 'w') as f:\n    f.write('hello')\nwith open('note.txt') as f:\n    print(f.read())",q:"Write hi to a file called a.txt, read it back and print it.",a:"hi"},
+{t:"16. Generators",d:"A generator makes values one at a time with yield, instead of building a whole list in memory.",h:"Calling a generator function runs nothing yet. Each next() runs the code until the next yield, pauses, and remembers its place.",c:"def count(n):\n    for i in range(1, n + 1):\n        yield i\n\nprint(list(count(3)))",q:"Write generator count(n) that yields 1 to n, then print list(count(4)).",a:"[1, 2, 3, 4]"},
+{t:"17. Decorators",d:"A decorator wraps a function to add behavior without changing its code. You apply it with @name.",h:"@deco above def hi is the same as hi = deco(hi). Python replaces the name with the wrapper function that deco returns.",c:"def deco(fn):\n    def wrap():\n        print('before')\n        fn()\n    return wrap\n\n@deco\ndef hi():\n    print('hi')\n\nhi()",q:"Write a decorator that prints start before calling a function that prints hello. Call that function.",a:"start\nhello"},
+{t:"18. Inheritance",d:"A child class inherits everything from a parent class and can override methods to change them.",h:"When you call a method, Python looks in the object's class first, then in its parents in order (the method resolution order), and runs the first match.",c:"class Animal:\n    def speak(self):\n        return '...'\n\nclass Dog(Animal):\n    def speak(self):\n        return 'Woof'\n\nprint(Dog().speak())",q:"Make Animal.speak return ... and Dog(Animal).speak return Woof. Print Dog().speak().",a:"Woof"},
+{t:"19. Dataclasses and type hints",d:"Type hints label what type a value should be. A dataclass writes the boring class code (init, repr) for you from those labels.",h:"Hints are ignored when the program runs and are used by editors and checkers. @dataclass reads them and generates methods for you.",c:"from dataclasses import dataclass\n\n@dataclass\nclass Point:\n    x: int\n    y: int\n\nprint(Point(1, 2))",q:"Create a dataclass Point with x and y and print Point(1, 2).",a:"Point(x=1, y=2)"},
+{t:"20. Context managers",d:"A context manager runs setup and cleanup code around a with block. It needs __enter__ and __exit__.",h:"with calls __enter__ first, runs your block, then always calls __exit__, even if an exception happened inside.",c:"class Box:\n    def __enter__(self):\n        print('open')\n    def __exit__(self, *a):\n        print('close')\n\nwith Box():\n    print('work')",q:"Make a context manager that prints open on enter and close on exit, with work printed inside the with block.",a:"open\nwork\nclose"},
+{t:"21. Regular expressions",d:"A regex is a pattern for finding text. The re module searches, matches and replaces with them.",h:"Python compiles the pattern into a small state machine and scans the text from left to right, reporting each place that fits.",c:"import re\nprint(re.findall(r'\\d+', 'a1b22c333'))",q:"Use re.findall to print every group of digits in a1b22c333.",a:"['1', '22', '333']"},
+{t:"22. functools and itertools",d:"These standard modules give you building blocks, such as reduce to combine values and permutations to list orders.",h:"reduce takes the first two items, combines them, then combines that result with the third, and so on until one value is left.",c:"from functools import reduce\nfrom itertools import permutations\nprint(reduce(lambda a, b: a * b, [1, 2, 3, 4]))\nprint(len(list(permutations('abc'))))",q:"Use reduce to multiply [1, 2, 3, 4] and print the result.",a:"24"},
+{t:"23. Testing with assert",d:"assert checks that something is true. If it is false, Python raises an AssertionError and shows you the bug right away.",h:"assert condition is shorthand for: if not condition, raise AssertionError. Test tools such as pytest build on this idea.",c:"def add(a, b):\n    return a + b\n\nassert add(2, 3) == 5\nprint('tests passed')",q:"Write add(a, b), assert add(2, 3) == 5, then print tests passed.",a:"tests passed"}
+];
+const LEVELS=[[0,"Beginner"],[60,"Learner"],[150,"Intermediate"],[300,"Advanced"],[450,"Expert"],[600,"Master"]];
+const $=id=>document.getElementById(id);
+const ymd=d=>d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0");
+const today=()=>ymd(new Date());
+let mode="login",user=null,D=null,cur=0,py=null;
+
+/* ===== AUTH (stored in this browser only; see README note) ===== */
+async function hash(s){const b=await crypto.subtle.digest("SHA-256",new TextEncoder().encode(s));return [...new Uint8Array(b)].map(x=>x.toString(16).padStart(2,"0")).join("")}
+const users=()=>JSON.parse(localStorage.getItem("pp_users")||"{}");
+$("tL").onclick=()=>setMode("login");$("tS").onclick=()=>setMode("signup");
+function setMode(m){mode=m;$("tL").className=m=="login"?"on":"sec";$("tS").className=m=="signup"?"on":"sec";$("go").textContent=m=="login"?"Log in":"Create account";$("err").textContent=""}
+$("af").onsubmit=async e=>{e.preventDefault();const n=$("u").value.trim().toLowerCase(),h=await hash($("p").value),us=users();
+  if(mode=="signup"){if(us[n]){$("err").textContent="That username is taken. Pick another.";return}us[n]=h;localStorage.setItem("pp_users",JSON.stringify(us))}
+  else if(us[n]!==h){$("err").textContent="Username or password is wrong.";return}
+  localStorage.setItem("pp_session",n);start(n)};
+$("out").onclick=()=>{localStorage.removeItem("pp_session");location.reload()};
+
+/* ===== DATA ===== */
+const save=()=>localStorage.setItem("pp_d_"+user,JSON.stringify(D));
+function add(pts,msg){D.score+=pts;if(pts>0)D.weekly[wk()]=(D.weekly[wk()]||0)+pts;D.log.unshift(`${new Date().toLocaleTimeString([], {hour:"2-digit",minute:"2-digit"})} ${msg}${pts?" (+"+pts+")":""}`);D.log=D.log.slice(0,40);save();render()}
+function day(){const k=today();return D.days[k]=D.days[k]||{runs:0,done:0,pass:0,bonus:false}}
+function streak(){let s=0,d=new Date();if(!D.days[today()]||!(D.days[today()].runs))d.setDate(d.getDate()-1);
+  while(D.days[ymd(d)]&&D.days[ymd(d)].runs){s++;d.setDate(d.getDate()-1)}return s}
+function checkBonus(){const t=day();if(!t.bonus&&t.runs>=3&&t.done>=1&&t.pass>=1){t.bonus=true;add(30,"Daily goals complete 🎉")}}
+
+/* ===== PROFILE, AVATARS, LEADERBOARD ===== */
+const AV=[["🐍",0],["🐱",0],["🦊",25],["🐼",50],["🐙",90],["🦉",140],["🐉",200],["🤖",280],["👾",360],["🦄",450]];
+const FR=[["Thin","1px solid",0],["Bold","3px solid",60],["Double","6px double",120],["Dashed","3px dashed",180],["Dotted","4px dotted",250]];
+const PHOTO=50;
+const esc=s=>String(s).replace(/[&<>"']/g,c=>"&#"+c.charCodeAt(0)+";");
+const wk=()=>{const d=new Date();d.setDate(d.getDate()-((d.getDay()+6)%7));return ymd(d)};
+function avh(p,big){const f=FR[p.fr]||FR[0];return `<span class="av${big?" big":""}" style="border:${f[1]} var(--ink)">${p.img?`<img src="${p.img}" alt="">`:p.av}</span>`}
+function board(){const w=wk(),rows=[];
+  for(let i=0;i<localStorage.length;i++){const k=localStorage.key(i);if(k.startsWith("pp_d_")){const n=k.slice(5);try{const d=n==user?D:JSON.parse(localStorage.getItem(k));rows.push({n,p:(d.weekly||{})[w]||0,pr:Object.assign({av:"🐍",fr:0,img:""},d.prof||{})})}catch(e){}}}
+  rows.sort((a,b)=>b.p-a.p);
+  $("lb").innerHTML=rows.slice(0,10).map((r,i)=>`<li class="${r.n==user?"me":""}"><span class="n">${i+1}</span>${avh(r.pr)}<span class="sp">${esc(r.n)}</span><b>${r.p}</b></li>`).join("")}
+function profile(){const p=Object.assign({},D.prof),m=$("pm"),lk=n=>D.score<n;
+  function draw(){const ob=$("bio");if(ob&&m.contains(ob))p.bio=ob.value;
+    m.innerHTML=`<h2>Your profile</h2><div class="row" style="align-items:center">${avh(p,1)}<div><b>${esc(user)}</b><br><small>${D.score} points</small></div></div>
+<h3>Avatar</h3><div class="grid">${AV.map((a,i)=>`<button class="it${p.av==a[0]&&!p.img?" sel":""}" data-a="${i}"${lk(a[1])?" disabled":""}>${a[0]}<small>${lk(a[1])?"🔒 "+a[1]+" pts":"✔"}</small></button>`).join("")}</div>
+<h3>Frame</h3><div class="grid">${FR.map((f,i)=>`<button class="it${p.fr==i?" sel":""}" data-f="${i}"${lk(f[2])?" disabled":""}>${f[0]}<small>${lk(f[2])?"🔒 "+f[2]+" pts":"✔"}</small></button>`).join("")}</div>
+<h3>Profile picture</h3>${lk(PHOTO)?`<p>🔒 Unlocks at ${PHOTO} points.</p>`:`<div class="row"><input id="pf" type="file" accept="image/*" aria-label="Upload photo"><button class="sec" id="rm">Use emoji avatar</button></div>`}
+<h3>Bio</h3><input id="bio" maxlength="80" placeholder="Say something about you" value="${esc(p.bio||"")}">
+<div class="row"><button class="pri" id="sv">Save</button><button class="sec" id="cl">Cancel</button></div>`;
+    m.querySelectorAll("[data-a]").forEach(b=>b.onclick=()=>{p.av=AV[b.dataset.a][0];p.img="";draw()});
+    m.querySelectorAll("[data-f]").forEach(b=>b.onclick=()=>{p.fr=+b.dataset.f;draw()});
+    if($("rm"))$("rm").onclick=()=>{p.img="";draw()};
+    if($("pf"))$("pf").onchange=e=>{const f=e.target.files[0];if(!f)return;const r=new FileReader();r.onload=()=>{const im=new Image();im.onload=()=>{const c=document.createElement("canvas");c.width=c.height=96;const s=Math.min(im.width,im.height);c.getContext("2d").drawImage(im,(im.width-s)/2,(im.height-s)/2,s,s,0,0,96,96);p.img=c.toDataURL("image/jpeg",.8);draw()};im.src=r.result};r.readAsDataURL(f)};
+    $("cl").onclick=()=>m.close();
+    $("sv").onclick=()=>{p.bio=$("bio").value;D.prof=p;save();render();m.close()}}
+  draw();m.showModal()}
+
+/* ===== UI ===== */
+function start(n){user=n;D=JSON.parse(localStorage.getItem("pp_d_"+n)||'{"score":0,"done":{},"log":[],"days":{}}');D.weekly=D.weekly||{};D.prof=Object.assign({av:"🐍",fr:0,bio:"",img:""},D.prof||{});
+  $("auth").classList.add("hide");$("app").classList.remove("hide");$("who").textContent=n;
+  cur=Math.max(0,L.findIndex((_,i)=>!D.done[i]));if(cur<0)cur=0;render();lesson()}
+function render(){$("who").innerHTML=avh(D.prof)+" "+esc(user);board();
+  $("score").textContent=D.score;$("level").textContent=[...LEVELS].reverse().find(l=>D.score>=l[0])[1];$("streak").textContent=streak();
+  const t=day(),g=[["Finish 1 lesson",t.done>=1,Math.min(t.done,1)+"/1"],["Run code 3 times",t.runs>=3,Math.min(t.runs,3)+"/3"],["Pass 1 challenge",t.pass>=1,Math.min(t.pass,1)+"/1"]];
+  $("goals").innerHTML=g.map(x=>`<div class="goal ${x[1]?"ok":""}"><span>${x[1]?"✔":"○"}</span>${x[0]} <small>${x[2]}</small></div>`).join("");
+  const c=g.filter(x=>x[1]).length;$("gbar").style.width=c/3*100+"%";$("gtxt").textContent=c==3?"All done today. Great work!":c+" of 3 goals done (+30 bonus when all 3 are done)";
+  const dn=L.filter((_,i)=>D.done[i]).length;$("pbar").style.width=dn/L.length*100+"%";$("ptxt").textContent=dn+" of "+L.length+" lessons complete";
+  $("nav").innerHTML="";L.forEach((l,i)=>{const b=document.createElement("button");b.textContent=l.t;b.className=(i==cur?"on ":"")+(D.done[i]?"dn":"");b.onclick=()=>{cur=i;render();lesson()};$("nav").append(b)});
+  $("log").innerHTML=D.log.length?D.log.map(x=>"<li>"+x+"</li>").join(""):"<li>Nothing yet. Run your first program.</li>"}
+function lesson(){const l=L[cur];
+  $("lesson").innerHTML=`<h2>${l.t}</h2>
+  <h3>Step 1: What it is</h3><p>${l.d}</p>
+  <h3>Step 2: How Python runs it</h3><p>${l.h}</p>
+  <h3>Step 3: Try the example</h3><textarea id="ed" spellcheck="false" aria-label="Python code editor"></textarea>
+  <div class="row"><button class="pri" id="run">▶ Run code</button><button class="sec" id="rs">Reset example</button></div>
+  <pre class="out" id="o" aria-live="polite">Output appears here.</pre>
+  <h3>Step 4: Challenge</h3><p><b>${l.q}</b></p>
+  <div class="row"><button class="yel" id="chk">Check my answer</button><button class="sec" id="fin">Mark lesson complete (+10)</button></div>
+  <p class="res" id="res"></p>
+  <div class="row"><button class="sec" id="pv">← Previous</button><button class="sec" id="nx">Next →</button></div>`;
+  $("ed").value=l.c;$("rs").onclick=()=>$("ed").value=l.c;
+  $("run").onclick=()=>run(false);$("chk").onclick=()=>run(true);
+  $("fin").onclick=()=>{if(D.done[cur]){$("res").textContent="Already completed.";return}D.done[cur]=1;day().done++;add(10,"Completed: "+l.t);checkBonus()};
+  $("pv").onclick=()=>{cur=Math.max(0,cur-1);render();lesson()};$("nx").onclick=()=>{cur=Math.min(L.length-1,cur+1);render();lesson()}}
+
+/* ===== RUN PYTHON IN THE BROWSER (Pyodide) ===== */
+function loadPy(){if(py)return py;py=new Promise((ok,no)=>{const s=document.createElement("script");s.src="https://cdn.jsdelivr.net/npm/pyodide@0.26.4/pyodide.js";
+  s.onload=()=>loadPyodide().then(ok,no);s.onerror=()=>no(new Error("Could not load Python runtime. Check your internet."));document.head.append(s)});return py}
+async function run(check){const o=$("o"),res=$("res");o.textContent="Running… (first run loads Python, please wait)";res.textContent="";res.className="res";
+  let out=[],err=null;
+  try{const p=await loadPy();p.setStdout({batched:s=>out.push(s)});p.setStderr({batched:s=>out.push(s)});await p.runPythonAsync($("ed").value)}
+  catch(e){err=String(e.message||e).trim().split("\n").slice(-2).join("\n")}
+  const text=out.join("\n")+(err?(out.length?"\n":"")+"Error: "+err:"");o.textContent=text||"(no output)";
+  day().runs++;add(1,"Ran code");
+  if(check){const l=L[cur];
+    if(!err&&out.join("\n").trim()===l.a){res.className="res ok";if(!D.done["p"+cur]){D.done["p"+cur]=1;day().pass++;res.textContent="Correct! +20 points";add(20,"Passed challenge "+(cur+1))}else res.textContent="Correct again. Points are earned once per challenge.";checkBonus()}
+    else{res.className="res bad";res.textContent="Not yet. Expected output:\n"+l.a}}
+  else checkBonus()}
+
+$("who").onclick=profile;
+const s=localStorage.getItem("pp_session");if(s&&users()[s])start(s);
+</script>
+</body>
+</html>
